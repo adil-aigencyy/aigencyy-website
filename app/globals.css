@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --plum: #3c1053;
+  --font-sans: var(--font-inter);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(61, 16, 96, 0.12);
+}
