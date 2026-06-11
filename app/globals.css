@@ -25,3 +25,179 @@ body {
 ::selection {
   background: rgba(61, 16, 96, 0.12);
 }
+
+/* ── Intelligence section ───────────────────────────────────────────── */
+.intel-content {
+  padding: 0 48px;
+}
+
+.intel-headline {
+  font-size: clamp(3rem, 8.5vw, 9.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
+
+.intel-subtext {
+  margin-top: 32px;
+  font-weight: 400;
+  line-height: 1.65;
+  max-width: 400px;
+  font-size: clamp(0.875rem, 1.15vw, 1.05rem);
+}
+
+@media (max-width: 1023px) {
+  .intel-content  { padding: 0 36px; }
+  .intel-headline { font-size: clamp(2.5rem, 8.5vw, 5.5rem); }
+  .intel-subtext  { font-size: 1rem; margin-top: 24px; }
+}
+
+@media (max-width: 767px) {
+  .intel-content  { padding: 0 20px; }
+  .intel-headline { font-size: clamp(2.2rem, 12vw, 3.5rem); }
+  .intel-subtext  { font-size: 0.9rem; max-width: 280px; margin-top: 20px; }
+}
+
+/* ── What We Build section ──────────────────────────────────────────── */
+.wwb-nav {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 48px;
+}
+
+.wwb-state {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 48px;
+  pointer-events: none;
+}
+
+.wwb-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9CA3AF;
+  margin: 0 0 20px 0;
+}
+
+.wwb-headline {
+  font-size: clamp(3rem, 10vw, 11rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  margin: 0;
+  color: #0D0B14;
+}
+
+.wwb-paragraph {
+  margin-top: 28px;
+  font-weight: 400;
+  line-height: 1.65;
+  max-width: 420px;
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  color: #6B7280;
+}
+
+.wwb-dots {
+  position: absolute;
+  right: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 1023px) {
+  .wwb-nav      { padding: 22px 36px !important; }
+  .wwb-state    { padding: 80px 36px 60px !important; }
+  .wwb-headline { font-size: clamp(2.5rem, 8.5vw, 6.5rem) !important; }
+  .wwb-dots     { right: 32px !important; }
+}
+
+@media (max-width: 767px) {
+  .wwb-nav       { padding: 20px 20px !important; }
+  .wwb-state     { padding: 70px 20px 60px !important; }
+  .wwb-headline  { font-size: clamp(2.2rem, 12vw, 3.5rem) !important; }
+  .wwb-paragraph { font-size: 0.9rem; max-width: 280px; }
+  .wwb-dots      { display: none !important; }
+}
+
+/* ── ESRA section responsive ────────────────────────────────────────── */
+.esra-columns {
+  padding: 120px 100px 100px 120px !important;
+}
+
+@media (max-width: 1200px) {
+  .esra-columns { padding: 110px 60px 80px 80px !important; gap: 32px !important; }
+}
+
+@media (max-width: 1023px) {
+  .esra-columns {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 110px 48px 100px !important;
+    gap: 48px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .esra-columns {
+    padding: 100px 24px 90px !important;
+    gap: 40px !important;
+  }
+}
+
+/* ── Why AIGENCYY two-column layout ─────────────────────────────────── */
+@media (max-width: 1200px) {
+  .why-columns { padding: 110px 60px 80px 80px !important; gap: 48px !important; }
+}
+
+@media (max-width: 1023px) {
+  .why-columns {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    padding: 110px 48px 100px !important;
+    gap: 48px !important;
+  }
+  .why-image { width: 100% !important; max-width: 520px !important; }
+}
+
+@media (max-width: 767px) {
+  .why-columns { padding: 100px 24px 80px !important; gap: 40px !important; }
+  .why-image { max-width: 420px !important; }
+}
+
+/* ── Let's Talk content padding ─────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .letstalk-content { padding-left: 80px !important; }
+}
+
+@media (max-width: 1023px) {
+  .letstalk-content { padding-left: 48px !important; }
+}
+
+@media (max-width: 767px) {
+  .letstalk-content { padding-left: 24px !important; padding-right: 24px !important; }
+}
+
+/* ── Reduced motion ─────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto !important; }
+}
